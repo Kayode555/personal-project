@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AX Accessories</title> 
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navbar Styling */
+        nav {
+            background-color: #dc3545;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+        }
+
+        nav h1 {
+            color: white;
+            font-size: 1.8rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li {
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        nav form {
+            display: flex;
+            align-items: center;
+        }
+
+        /* Styled Search Bar */
+        nav input[type="search"] {
+            padding: 10px;
+            font-size: 1rem;
+            border: 2px solid #dc3545;
+            border-radius: 5px;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        nav input[type="search"]:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+
+        nav button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin-left: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        nav button:hover {
+            background-color: #c82333;
+        }
+
+        /* Category Buttons */
+        .category-buttons {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .category-btn {
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border-radius: 5px;
+            margin: 0 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .category-btn:hover {
+            background-color: #c82333;
+        }
+
+        /* Image and Text Section */
+        section {
+            position: relative;
+            width: 100%;
+        }
+
+        section img {
+            width: 100%;
+            height: auto;
+            max-height: 500px;
+            object-fit: cover;
+        }
+
+        .order-text {
+            position: absolute;
+            top: 20%;
+            left: 5%;
+            color: white;
+            font-size: 2.5rem;
+            width: 50%;
+        }
+
+        .order-text1 {
+            position: absolute;
+            top: 50%;
+            left: 5%;
+            color: white;
+            font-size: 2.1rem;
+            width: 50%;
+        }
+
+        /* Product Section */
+        .section1 {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .red {
+            background-color: white;
+            box-shadow: 2px 2px 22px rgba(0, 0, 0, 0.208);
+            padding: 10px;
+            width: 250px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .red img {
+            border-radius: 10px;
+        }
+
+        .red h3 {
+            font-size: 1.2rem;
+            margin: 10px 0;
+        }
+
+        .red p {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .red .small {
+            display: block;
+            margin: 10px 0;
+            font-size: 0.8rem;
+            color: #dc3545;
+        }
+
+        .red .button {
+            padding: 10px 15px;
+            border: none;
+            background-color: #dc3545;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            transition:  0.3s ease; 
+            animation: ease-in-out;
+        }
+
+        .red .button:hover {
+            background-color: #c82333;
+        }  
+        .section3{ 
+            background-color: #dc3545; 
+            
+        } 
+        .section3 img{ 
+            width: 50px; 
+            border-radius: 7%; 
+            height: 40vh; 
+            width: 220px; 
+            padding-top: 10px; 
+            padding-left: 10px;
+        } 
+        .section3 h3{ 
+            display: inline-block; 
+            padding-inline: 90px;  
+            font-size: 70px; 
+            color: aliceblue; 
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            
+        } 
+        .section3 p{ 
+            text-align: center;
+            color: white; 
+            justify-content:center ; 
+            font-size: larger;
+        } 
+        .section {
+                width: 100%;
+                display: block;  
+                background-image: linear-gradient(2px 20px 10px ) url(istockphoto-1185197169-612x612.jpg);
+            }
+        /* .button2{ 
+            background-color: #c82333;
+            width: 250px;
+            padding: 0px 20px 30px;
+        } */
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+                display: none;
+            }
+
+            .order-text {
+                font-size: 1.8rem;
+                width: 70%;
+                top: 15%;
+            }
+
+            .order-text1 {
+                font-size: 15px;
+                width: 70%;
+            }
+
+            .red {
+                width: 100%;
+                max-width: 300px;
+                margin: 10px auto;
+            } 
+            .section3 h3{ 
+            display: inline-block; 
+            padding-inline: 90px;  
+            font-size: 15px; 
+            
+            
+        }
+        .section3 img{ 
+            width: 200px; 
+            border-radius: 7%;
+        }  
+
+        }
+
+        @media (max-width: 576px) {
+            nav {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .order-text {
+                font-size: 15px;
+                width: 70%;
+                top: 10%;
+            }
+
+            .section1 {
+                width: 100%;
+                display: block;  
+                background-image: linear-gradient(2px 20px 10px ) url(istockphoto-1185197169-612x612.jpg);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <h1>AX Accessories</h1>
+        <ul>
+            <li>About</li>
+            <li>Products</li>
+            <li>Services</li>
+            <li>Contact</li>
+            <li>FAQ</li>
+        </ul>
+        <form>
+            <input type="search" placeholder="Search">
+            <button type="submit">Search</button>
+        </form>
+    </nav>
+
+    <!-- Category Buttons -->
+    <section class="category-buttons">
+        <button class="category-btn">Watches</button>
+        <button class="category-btn">Cars</button>
+        <button class="category-btn">All</button>
+    </section>
+
+    <!-- Image Section with Text Overlay -->
+    <section> 
+        
+        <img src="pexels-philip-lindvall-300724-1120275.jpg" alt="Product Image">
+        <h1 class="order-text">ORDER ANY ACCESSORY OF YOUR CHOICE</h1> 
+        <p class="order-text1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga laboriosam aldus dolore error, et alias, molestias esse eveniet.</p>
+    </section>
+
+    <br><br>
+
+    <!-- Product Section -->
+    <section class="section1">
+        <div class="red" data-category="watch">
+            <img src="pexels-ferarcosn-190819.jpg" alt="" width="260"> 
+            <h3>Croatia wrist watch</h3> 
+            <p>Lorem ipsum dolor, sit amet</p>  
+            <small class="small">CALL US NOW</small> 
+            <button class="button">Buy Now</button>  
+            <h6>#2000</h6> 
+        </div>  
+        <div class="red" data-category="car">
+            <img src="pexels-jatin-anand-33853-125779.jpg" alt="" width="260"> 
+            <h3>Croatia car</h3> 
+            <p>Lorem ipsum dolor, sit amet</p>  
+            <small class="small">CALL US NOW</small> 
+            <button class="button">Buy Now</button> 
+            <h6>#2000</h6>  
+        </div>  
+    </section> 
+    <section class="section1">
+        <div class="red" data-category="watch">
+            <img src="pexels-pixabay-277390.jpg" alt="" width="260"> 
+            <h3>Croatia wrist watch</h3> 
+            <p>Lorem ipsum dolor, sit amet</p>  
+            <small class="small">CALL US NOW</small> 
+            <button class="button">Buy Now</button>   
+            <h6>#2000</h6> 
+        </div>  
+        <div class="red" data-category="car">
+            <img src="pexels-pixabay-364822.jpg" alt="" width="260"> 
+            <h3>Croatia car</h3> 
+            <p>Lorem ipsum dolor, sit amet</p>  
+            <small class="small">CALL US NOW</small> 
+            <button class="button">Buy Now</button>  
+            <h6>#2000</h6> 
+        </div>  
+    </section> 
+
+    <br><br>
+
+    <!-- Order Button -->
+
+    <section class="section3">  
+        <div>
+    <img src="istockphoto-1185197169-612x612.jpg" alt="" width="">  
+    <h3>Who We Are</h3>  
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio, repellat! Vitae non voluptates, nihil alias, animi similique dignissimos eos quas quod cum modi rerum pariatur porro! Doloribus aliquam quisquam inventore.</p> 
+      
+    <img src="shopping.webp" alt=""> 
+    <h3>Who We Are</h3>  
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio, repellat! Vitae non voluptates, nihil alias, animi similique dignissimos eos quas quod cum modi rerum pariatur porro! Doloribus aliquam quisquam inventore.</p> 
+</div> 
+
+    </section>  
+    <div> 
+        
+        <span></span>
+    </div>
+  
+
+</body>
+</html>

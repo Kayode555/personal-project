@@ -1,0 +1,17 @@
+*{ 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+.red{ 
+     
+        background-color: white; 
+        box-shadow: 2px 2px 22px rgba(0, 0, 0,0.208); 
+        padding: 10px; 
+        width: 340px; 
+        display: inline-block; 
+        border-radius: 10px; 
+        margin-right: 40px; 
+    
+    
+}
